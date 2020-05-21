@@ -17,20 +17,20 @@ def sub(x, y):
 
 print("Select operation:")
 print("1. Addition")
-print("2. Subtract")
+print("2. Subtract\n")
 
 # Ask choice of the user
-choice = input("Enter choice(1/2): ")
+choice = int(input("Enter choice(1/2): "))
 
 # Take input from user
-x = float(input("Enter First Number: "))
+x = float(input("\nEnter First Number: "))
 y = float(input("Enter Second Number: "))
 
 if choice == 1:
-    print(f"{x} + {y} = {calc(add, x, y)}")
+    print(f"\n{x} + {y} = {calc(add, x, y)}")
 
 elif choice == 2:
-    print(f"{x} - {y} = {calc(sub, x, y)}")
+    print(f"\n{x} - {y} = {calc(sub, x, y)}")
 
 else:
-    print("Invalid Input")
+    print("\nInvalid Input")
