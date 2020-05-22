@@ -55,7 +55,7 @@ while True:
             print(f"\n{x} / {y} = {calc(div, x, y)}\n")
 
     elif choice == "5":
-        sys.exit()
+        sys.exit("See you later!")
 
     else:
         print("\nInvalid Input\n")
