@@ -77,4 +77,4 @@ def calculate():
         again()
 
 
-menu()
+calculate()
