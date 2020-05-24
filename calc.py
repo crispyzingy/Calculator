@@ -1,18 +1,6 @@
 # A simple calculator that can add, subtract, multiply and divide
 
 
-def again():
-    calc_again = input(
-        "Do you want to calculate again? Please type Y for YES or N for NO. "
-    )
-    if calc_again.lower() == "y":
-        calculate()
-    elif calc_again.lower() == "n":
-        print("See you later.")
-    else:
-        again()
-
-
 def calculate():
     # Take input from user
     print("Press Enter Key after giving your input")
@@ -35,6 +23,18 @@ def calculate():
     print(f"Answer: {out}")
 
     again()
+
+
+def again():
+    calc_again = input(
+        "Do you want to calculate again? Please type Y for YES or N for NO. "
+    )
+    if calc_again.lower() == "y":
+        calculate()
+    elif calc_again.lower() == "n":
+        print("See you later.")
+    else:
+        again()
 
 
 calculate()
