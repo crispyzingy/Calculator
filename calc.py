@@ -9,8 +9,6 @@ def calculate():
     operator = input("Operator (+, -, *, /):\n")
     num2 = float(input("Second Number:\n"))
 
-    out = None
-
     if operator == "+":
         out = num1 + num2
     elif operator == "-":
