@@ -9,7 +9,7 @@ def calculate():
     operator = input("Operator (+, -, *, /):\n")
     num2 = float(input("Second Number:\n"))
 
-    out = None
+    out = None  # default value
 
     if operator == "+":
         out = num1 + num2
