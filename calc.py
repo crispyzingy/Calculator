@@ -1,40 +1,37 @@
 # A simple calculator that can add, subtract, multiply and divide
+from operator import truediv, mul, add, sub
 
 
-def calculate():
-    # Take input from user
-    print("Press Enter Key after giving your input")
-
-    num1 = float(input("First Number:\n"))
-    operator = input("Operator (+, -, *, /):\n")
-    num2 = float(input("Second Number:\n"))
-
-    out = None  # default value
-
-    if operator == "+":
-        out = num1 + num2
-    elif operator == "-":
-        out = num1 - num2
-    elif operator == "*":
-        out = num1 * num2
-    elif operator == "/":
-        out = num1 / num2
-
-    print(f"Answer: {out}")
-
-    again()
+operators = {"+": add, "-": sub, "*": mul, "/": truediv}
 
 
-def again():
+def calculate(s):
+    if s.isdigit():
+        return float(s)
+    for char in operators.keys():
+        left, operator, right = s.partition(char)
+        if operator in operators:
+            return operators[operator](calculate(left), calculate(right))
+
+
+def want_to_continue():
     calc_again = input(
         "Do you want to calculate again? Please type Y for YES or N for NO. "
     )
     if calc_again.lower() == "y":
-        calculate()
+        inform()
     elif calc_again.lower() == "n":
         print("See you later.")
     else:
-        again()
+        want_to_continue()
 
 
-calculate()
+def inform():
+    calc = input(
+        "This calculator supports add, sub, mul and div operations. Enter, what you want to calculate:\n"
+    )
+    print("Answer: " + str(calculate(calc)))
+
+
+inform()
+want_to_continue()
