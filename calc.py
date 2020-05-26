@@ -18,7 +18,7 @@ def calculate(s):
         """
         if operator in operators:
             return operators[operator](calculate(left), calculate(right))
-            """Here we, re recursively calculating left and right till they become floats. Our goal is to get this kind of expression in the end: add(1, 6)"""
+            """Here we're recursively calculating left and right till they become floats. Our goal is to get this kind of expression in the end: add(1, 6)"""
 
 
 def want_to_continue():
