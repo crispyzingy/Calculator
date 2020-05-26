@@ -7,11 +7,18 @@ operators = {"+": add, "-": sub, "*": mul, "/": truediv}
 
 def calculate(s):
     if s.isdigit():
-        return float(s)
-    for char in operators.keys():
+        return float(s)  # Convert a digit string to float
+    for char in operators.keys():  # 1 + 2 * 3
         left, operator, right = s.partition(char)
+        """
+        Partitions like:
+        left = '1'
+        operator = '+'
+        right = '2*3'
+        """
         if operator in operators:
             return operators[operator](calculate(left), calculate(right))
+            # our goal is to get this kind of expression in the end: add(1, 6)
 
 
 def want_to_continue():
