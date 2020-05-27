@@ -7,7 +7,7 @@ operators = {"+": add, "-": sub, "*": mul, "/": truediv}
 
 def calculate(s):
     if s.isdigit():
-        return float(s)  # Convert a digit string to float
+        return int(s)  # Convert a digit string to float
     for char in operators.keys():  # 1 + 2 * 3
         left, operator, right = s.partition(char)
         """
