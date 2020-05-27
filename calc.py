@@ -20,7 +20,11 @@ def calculate(s):
 
         if operator in operators:
             return operators[operator](calculate(left), calculate(right))
-            """Here we're recursively calculating left and right till they become floats. Our goal is to get this kind of expression in the end: add(1, 6)"""
+            """
+            Here we're recursively calculating left and right till they become floats.
+            Our goal is to get this kind of expression in the end:
+            add(1, 6)
+            """
 
 
 def inform():
@@ -28,7 +32,7 @@ def inform():
 
     while not ready_to_quit:
         calc = input(
-            """\nThis calculator supports add, sub, mul and div operations. Enter below, what you want to calculate or type 'q' to quit:\n"""
+            "\nThis calculator supports add, sub, mul and div operations. Enter below, what you want to calculate or type 'q' to quit:\n"
         )
 
         if calc.lower() == "q":
