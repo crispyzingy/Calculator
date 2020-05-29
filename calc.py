@@ -6,8 +6,10 @@ operators = {"+": add, "-": sub, "*": mul, "/": truediv}
 
 
 def calculate(s):
-    if s.isdigit() or s.replace(".", "", 1).isdigit():
-        return float(s)  # Convert a digit string to float
+    if s.isdigit():  # check if str is only digits
+        return int(s)
+    elif s.replace(".", "", 1).isdigit():  # check if str only floats
+        return float(s)
 
     for char in operators.keys():  # 1 + 2 * 3
         left, operator, right = s.partition(char)
